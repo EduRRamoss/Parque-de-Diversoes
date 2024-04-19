@@ -1,5 +1,8 @@
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using ParqueDeDiversaoAPI.ApplicationDbContext;
+using ParqueDeDiversaoAPI.Interfaces;
+using ParqueDeDiversaoAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +14,20 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Modificacoes parque
+/*
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    }
+);*/
 builder.Services.AddDbContext<Context>(e => 
     e.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+builder.Services.AddCors();
+//builder.Services.AddScoped(typeof(IGenericType<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(DbContext), typeof(Context));
 
 var app = builder.Build();
 

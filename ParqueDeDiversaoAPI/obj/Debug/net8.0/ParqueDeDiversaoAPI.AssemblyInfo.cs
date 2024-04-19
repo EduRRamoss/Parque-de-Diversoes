@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParqueDeDiversaoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a61fdc191062ac60b1e8d0cda928a719b2842c1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f8bb58306f71f1fd2fe3a4aa2586b819e8f201e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParqueDeDiversaoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParqueDeDiversaoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
